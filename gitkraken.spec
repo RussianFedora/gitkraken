@@ -10,6 +10,7 @@ Release: 1%{?dist}
 Summary: Git GUI client
 URL: https://www.gitkraken.com/
 License: Proprietary
+ExclusiveArch: x86_64
 
 Source0: https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz#/%{name}-%{version}.tar.gz
 Source1: %{name}.png
@@ -21,9 +22,6 @@ BuildRequires: /usr/bin/convert
 Requires(post): %{_sbindir}/update-alternatives
 Requires(postun): %{_sbindir}/update-alternatives
 Requires: hicolor-icon-theme
-
-ExclusiveArch: x86_64
-#AutoProv: no
 
 %description
 GitKraken - The legendary Git GUI client for Windows, Mac and Linux.
