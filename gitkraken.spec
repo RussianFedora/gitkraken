@@ -46,6 +46,9 @@ touch %{buildroot}%{_bindir}/%{name}
 # Installing to working directory from official package...
 cp -r %_builddir/%{name}/* %{buildroot}/opt/%{name}/
 
+# Removing some already installed files...
+rm -f %{buildroot}/opt/%{name}/LICENSE*
+
 # Installing icons...
 for size in 16 32 48 64 128 256 512; do
     dir="%{buildroot}%{_datadir}/icons/hicolor/${size}x${size}/apps"

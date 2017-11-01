@@ -4,7 +4,6 @@ GenericName=Git GUI client
 GenericName[ru]=Клиент Git с графическим интерфейсом
 Name=GitKraken
 Name[ru]=GitKraken
-Comment=Git GUI client
 Exec=/opt/gitkraken/gitkraken %F
 Icon=gitkraken
 Terminal=false
