@@ -7,7 +7,7 @@ Name: gitkraken
 Version: 3.2.1
 Release: 1%{?dist}
 
-Summary: GitKraken - Git GUI client
+Summary: Git GUI client
 URL: https://www.gitkraken.com/
 License: Proprietary
 
