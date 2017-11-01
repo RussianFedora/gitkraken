@@ -44,7 +44,7 @@ mkdir -p %{buildroot}/opt/%{name}/
 touch %{buildroot}%{_bindir}/%{name}
 
 # Installing to working directory from official package...
-cp -r %_builddir/%{name}/* %{buildroot}/opt/%{name}/
+cp -r %_builddir/%{name} %{buildroot}/opt
 
 # Removing some already installed files...
 rm -f %{buildroot}/opt/%{name}/LICENSE*
