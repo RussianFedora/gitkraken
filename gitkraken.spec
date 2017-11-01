@@ -1,3 +1,6 @@
+%global privlibs libffmpeg|libnode
+%global __requires_exclude ^(%{privlibs})\\.so
+%global __provides_exclude_from .*\\.so
 %global debug_package %{nil}
 
 Name: gitkraken
@@ -13,11 +16,14 @@ Source1: %{name}.png
 Source2: %{name}.desktop
 
 BuildRequires: desktop-file-utils
-BuildRequires: imagemagick
+BuildRequires: /usr/bin/convert
 
 Requires(post): %{_sbindir}/update-alternatives
 Requires(postun): %{_sbindir}/update-alternatives
 Requires: hicolor-icon-theme
+
+ExclusiveArch: x86_64
+#AutoProv: no
 
 %description
 GitKraken - The legendary Git GUI client for Windows, Mac and Linux.
@@ -38,7 +44,7 @@ mkdir -p %{buildroot}/opt/%{name}/
 touch %{buildroot}%{_bindir}/%{name}
 
 # Installing to working directory from official package...
-mv %_builddir/%{name}/* %{buildroot}/opt/%{name}/
+cp -r %_builddir/%{name}/* %{buildroot}/opt/%{name}/
 
 # Installing icons...
 for size in 16 32 48 64 128 256 512; do
@@ -68,6 +74,7 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %files
+%license LICENSE LICENSES.chromium.html
 /opt/%{name}
 %ghost %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
