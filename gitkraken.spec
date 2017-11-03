@@ -17,7 +17,7 @@ Source1: %{name}.png
 Source2: %{name}.desktop
 
 BuildRequires: desktop-file-utils
-BuildRequires: /usr/bin/convert
+BuildRequires: %{_bindir}/convert
 
 Requires(post): %{_sbindir}/update-alternatives
 Requires(postun): %{_sbindir}/update-alternatives
