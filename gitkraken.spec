@@ -76,7 +76,7 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %files
-%license LICENSE LICENSES.chromium.html
+%license LICENS*
 /opt/%{name}
 %ghost %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
