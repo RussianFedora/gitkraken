@@ -22,6 +22,7 @@ BuildRequires: %{_bindir}/convert
 Requires(post): %{_sbindir}/update-alternatives
 Requires(postun): %{_sbindir}/update-alternatives
 Requires: hicolor-icon-theme
+Requires: git
 
 %description
 GitKraken - The legendary Git GUI client for Windows, Mac and Linux.
