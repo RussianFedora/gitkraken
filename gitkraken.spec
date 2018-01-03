@@ -21,6 +21,7 @@ BuildRequires: %{_bindir}/convert
 
 Requires(post): %{_sbindir}/update-alternatives
 Requires(postun): %{_sbindir}/update-alternatives
+Requires: libgnome-keyring%{?_isa}
 Requires: hicolor-icon-theme
 Requires: git%{?_isa}
 
