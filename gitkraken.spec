@@ -12,6 +12,7 @@ URL: https://www.gitkraken.com/
 License: Proprietary
 ExclusiveArch: x86_64
 
+# Release notes: https://support.gitkraken.com/release-notes/current
 Source0: https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz#/%{name}-%{version}.tar.gz
 Source1: %{name}.png
 Source2: %{name}.desktop
