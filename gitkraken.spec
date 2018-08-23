@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name: gitkraken
-Version: 3.6.6
+Version: 4.0.2
 Release: 1%{?dist}
 
 Summary: Git GUI client
@@ -79,6 +79,9 @@ fi
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 
 %changelog
+* Thu Aug 23 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 4.0.2-1
+- Updated to version 4.0.2.
+
 * Fri Aug 03 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 3.6.6-1
 - Updated to version 3.6.6.
 
